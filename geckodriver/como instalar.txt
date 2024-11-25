@@ -1,0 +1,5 @@
+1 - Descompacte o arquivo
+
+2 - Vá em variaveis de ambientes e copie o endereço que está instalado o python
+
+3 - copie os driver nessa mesma pasta
