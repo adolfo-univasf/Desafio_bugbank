@@ -1,0 +1,15 @@
+1732130044235	geckodriver	INFO	Listening on 127.0.0.1:56707
+1732130047292	mozrunner::runner	INFO	Running command: "C:\\Users\\adolf\\.cache\\selenium\\firefox\\win64\\132.0.2\\firefox.exe" "--marionette" "--remote-debuggin ... 8" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\adolf\\AppData\\Local\\Temp\\rust_mozprofilewQf1Sm"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1732130047524	Marionette	INFO	Marionette enabled
+1732130047677	Marionette	INFO	Listening on port 56730
+WebDriver BiDi listening on ws://127.0.0.1:56708
+Read port: 56730
+1732130047775	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1732130054354	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://bugbank.netlify.app."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://bugbank.netlify.app."
+1732130060382	Marionette	INFO	Stopped listening on port 56730
+Dynamically enable window occlusion 1

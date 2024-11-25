@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.2 on win32)" generated="2024-11-24T23:33:23.252731" rpa="false" schemaversion="5">
+<suite id="s1" name="Bugbank Testes" source="E:\Senhasegura\Desafio_bugbank\bugbank_testes.robot">
+<test id="s1-t1" name="Caso de Teste 02 - Login sem sucesso" line="17">
+<kw name="Abrir o navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-24T23:33:23.456917" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<arg>browser=firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-24T23:33:23.455916" elapsed="5.053600"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:23.455916" elapsed="5.053600"/>
+</kw>
+<kw name="Acessar a home page do site" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-24T23:33:28.510517" level="INFO">Opening url 'https://bugbank.netlify.app/home'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-24T23:33:28.510517" elapsed="1.549447"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-24T23:33:30.059964" elapsed="0.256235"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${LOGO_Bugbank}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-24T23:33:30.316199" elapsed="0.013012"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:28.509516" elapsed="1.819695"/>
+</kw>
+<kw name="preenche email" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-24T23:33:30.329211" level="INFO">Typing text 'teste@hotmail.com' into text field '(//input[contains(@type,'email')])[1]'.</msg>
+<arg>locator=${campo_Email}</arg>
+<arg>text=${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-24T23:33:30.329211" elapsed="0.032029"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:30.329211" elapsed="0.032029"/>
+</kw>
+<kw name="preenche senha errada" owner="keywords">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-24T23:33:30.361240" level="INFO">Typing password into text field '(//input[contains(@type,'password')])[1]'.</msg>
+<msg time="2024-11-24T23:33:30.365244" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${campo_Senha}</arg>
+<arg>password=${senha_errada}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-24T23:33:30.361240" elapsed="0.011011"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:30.361240" elapsed="0.011011"/>
+</kw>
+<kw name="clica botao Acessar" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-24T23:33:30.373251" level="INFO">Clicking button '//button[@type='submit'][contains(.,'Acessar')]'.</msg>
+<arg>locator=${botao_Acessar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-24T23:33:30.373251" elapsed="0.227208"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:30.373251" elapsed="0.228209"/>
+</kw>
+<kw name="Verifica se aviso senha invalida aparece" owner="keywords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>locator=${aviso_usuario_invalido}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-11-24T23:33:30.601460" elapsed="0.006006"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:30.601460" elapsed="0.006006"/>
+</kw>
+<kw name="Screenshot" owner="keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-11-24T23:33:30.642497" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-3.png"&gt;&lt;img src="screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-11-24T23:33:30.607466" elapsed="0.035031"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:30.607466" elapsed="0.035031"/>
+</kw>
+<kw name="Fechar o navegador" owner="keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-24T23:33:30.643498" elapsed="2.636083"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:30.643498" elapsed="2.636083"/>
+</kw>
+<tag>login_nok</tag>
+<status status="PASS" start="2024-11-24T23:33:23.454915" elapsed="9.824666"/>
+</test>
+<test id="s1-t2" name="Caso de Teste 03 - Login com sucesso" line="29">
+<kw name="Abrir o navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-24T23:33:33.280582" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<arg>browser=firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-24T23:33:33.280582" elapsed="5.008326"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:33.280582" elapsed="5.008326"/>
+</kw>
+<kw name="Acessar a home page do site" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-24T23:33:38.289909" level="INFO">Opening url 'https://bugbank.netlify.app/home'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-24T23:33:38.289909" elapsed="1.037945"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-24T23:33:39.327854" elapsed="0.288276"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${LOGO_Bugbank}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-24T23:33:39.616130" elapsed="0.012011"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:38.289909" elapsed="1.338232"/>
+</kw>
+<kw name="preenche email" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-24T23:33:39.629142" level="INFO">Typing text 'teste@hotmail.com' into text field '(//input[contains(@type,'email')])[1]'.</msg>
+<arg>locator=${campo_Email}</arg>
+<arg>text=${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-24T23:33:39.629142" elapsed="0.034030"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:39.628141" elapsed="0.035031"/>
+</kw>
+<kw name="preenche senha" owner="keywords">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-24T23:33:39.663172" level="INFO">Typing password into text field '(//input[contains(@type,'password')])[1]'.</msg>
+<msg time="2024-11-24T23:33:39.666175" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${campo_Senha}</arg>
+<arg>password=${senha}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-24T23:33:39.663172" elapsed="0.013012"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:39.663172" elapsed="0.013012"/>
+</kw>
+<kw name="clica botao Acessar" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-24T23:33:39.676184" level="INFO">Clicking button '//button[@type='submit'][contains(.,'Acessar')]'.</msg>
+<arg>locator=${botao_Acessar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-24T23:33:39.676184" elapsed="0.223204"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:39.676184" elapsed="0.223204"/>
+</kw>
+<kw name="Screenshot" owner="keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-11-24T23:33:39.935421" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-4.png"&gt;&lt;img src="screenshots/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-11-24T23:33:39.899388" elapsed="0.036033"/>
+</kw>
+<status status="PASS" start="2024-11-24T23:33:39.899388" elapsed="0.036033"/>
+</kw>
+<tag>login_ok</tag>
+<status status="PASS" start="2024-11-24T23:33:33.280582" elapsed="6.654839"/>
+</test>
+<status status="PASS" start="2024-11-24T23:33:23.253732" elapsed="16.682690"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login_nok</stat>
+<stat pass="1" fail="0" skip="0">login_ok</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Bugbank Testes">Bugbank Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
