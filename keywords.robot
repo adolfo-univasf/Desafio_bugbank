@@ -13,7 +13,7 @@ ${campo_Nome}                  @FindBy(xpath = "//input[contains(@type,'name')]"
 ${botao_Acessar}               //button[@type='submit'][contains(.,'Acessar')]
 ${botao_Registrar}             //button[@type='button'][contains(.,'Registrar')]
 ${aviso_usuario_invalido}      //div[contains(@class,'styles__ContainerContent-sc-8zteav-1 cSdWPv')]
-${Home_nome_user}              
+${Home_nome_user}              //div[contains(@class,'home__ContainerText-sc-1auj767-7 iDA-Ddb')]
 
 
 
@@ -61,11 +61,9 @@ Verifica se aviso senha invalida aparece
     Wait Until Element Is Enabled    locator=${aviso_usuario_invalido}
 
 
-
-Verifica se realizou login
+Verifica entrou na home
     Wait Until Element Is Enabled    locator=${Home_nome_user}
     
-
 
 Screenshot
     Capture Page Screenshot
